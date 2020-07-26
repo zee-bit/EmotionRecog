@@ -1,17 +1,20 @@
-# EmotionRecog
-Expression Recognition using Deep Learning Model
+# Emotion/Expression Recognition
+The objective of this project is to read facial expression of person and analyse them.
 
-Data Set is taken from Kaggle Facial Expression Recognition Challenge
-Image set of 35,887 examples, with training-set : dev-set: test-set as 80 : 10 : 10 .
-Classes are: anger, disgust, fear, happiness, sadness, surprise, and neutral. 
+## Usefulness
+It is being created for people who are preparing for online interviews, want to be successful in front of camera and all such people who want to analyse their expressions infront of camera. It will help them in recognizing whether they are confident, drowsy, angry, etc in front of camera.
+
+### Procedure
+- Collection of dataset.
+- Creation of classifier model with the best possible accuracy.
+- Deployment of classifier on web and app possibly.
+
+#### Must for all mentees
+- Create a separate branch and work on issues created.
+- Machine Learning developers will create branch as ML_Name
+- App/ Web developers as Dev_Name
+- All must have a Dependencies file.
+- Proper folder-file structure must be followed.
 
 
-Library Used:
-Keras
-Sklearn
-numpy
-tenserflow
-
-Dependencies:
-Python 3
-Libraries mentioned above
+Happy Coding!!!
