@@ -10,9 +10,7 @@ It is being created for people who are preparing for online interviews, want to 
 - Deployment of classifier on web and app possibly.
 
 #### Must for all mentees
-- Create a separate branch and work on issues created.
-- Machine Learning developers will create branch as ML_Name
-- App/ Web developers as Dev_Name
+- Create a PR for issues.
 - All must have a Dependencies file.
 - Proper folder-file structure must be followed.
 
