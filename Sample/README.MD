@@ -19,7 +19,7 @@
 <p align="center">
   <img src="https://github.com/harry418/EmotionRecog/blob/master/Sample/Disgust_Yawn/11.jpeg" width=270 height=300 />
   <img src="https://github.com/harry418/EmotionRecog/blob/master/Sample/Disgust_Yawn/12.jpeg" width=270 height=300 />
-  <img src="https://github.com/harry418/EmotionRecog/blob/master/Sample/Disgust_Yawn/20.jpeg" width=270 height=300 />
+  <img src="https://github.com/harry418/EmotionRecog/blob/master/Sample/Disgust_Yawn/20.jpg" width=270 height=300 />
   <img src="https://github.com/harry418/EmotionRecog/blob/master/Sample/Disgust_Yawn/14.jpg" width=270 height=300 />
   <img src="https://github.com/harry418/EmotionRecog/blob/master/Sample/Disgust_Yawn/15.jpeg" width=270 height=300 />
   <img src="https://github.com/harry418/EmotionRecog/blob/master/Sample/Disgust_Yawn/16.jpeg" width=270 height=300 />
