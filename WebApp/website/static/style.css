@@ -1,0 +1,67 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	background-image: url("images/background.jpg");
+	overflow: hidden;
+}
+div.logo{
+	font-style: italic;
+	font-size: 1.25rem; 
+	font-weight: bold;
+	position: fixed;
+	top: 0.5rem;
+	left: 0.7rem
+}
+div.content{
+	position: relative;
+	width: 60%;
+	height: 60%;
+	margin: 10% auto;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+div.frame{
+	position: absolute;
+	background-color: black;
+	opacity: 50%;
+	border-radius: 50%;
+	width: 350px;
+}
+div.frame::before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+ h3:not(.btn){
+ 	position: absolute;
+	color: #e1a550;
+	width: 40%;
+	height: auto;
+	z-index: 2;
+	word-spacing: 1rem;
+	line-height: 2rem
+}
+h5{
+	z-index: 2;
+	color: white;
+	font-style: italic;
+	bottom: 20%;
+	position: absolute;
+}
+div.content > a {
+	position: absolute;
+	background-color: #e1a550;
+	text-decoration: none;
+	bottom: 0;
+	color: white;
+	border-radius: 0.5rem
+}
+div.content > a > .btn{
+	padding: 0.8rem;
+}
