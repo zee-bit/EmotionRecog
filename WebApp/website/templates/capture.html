@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capture_image</title>
+    <!-- Link to your main style sheet-->
+    <link rel="stylesheet" href="static/style1.css">
+</head>
+<body>
+    <div class="logo"><a href="/" style="text-decoration: none; color: #e1a550;"><p>E<sup>motion</sup></p></a></div>
+    <!-- Camera -->
+    <main id="camera">
+        <!-- Camera sensor -->
+        <canvas id="camera--sensor"></canvas>
+        <!-- Camera view -->
+        <video id="camera--view" autoplay playsinline></video>
+        <!-- Camera output -->
+        <img src="//:0" alt="" id="camera--output">
+        <!-- Camera trigger -->
+        <button id="camera--trigger">Take a picture</button>
+    </main>
+    <!-- Reference to your JavaScript file -->
+    <script src="static/app.js"></script>
+</body>
+</html>
