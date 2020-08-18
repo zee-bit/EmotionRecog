@@ -62,3 +62,14 @@ plt.show()
 
 # storing model architecture for future use
 model.save('model_name')
+
+# printing confusion matrix
+from sklearn.metrics import confusion_matrix
+y_pred = model.predict(testX)
+y_p = np.argmax(y_pred,axis=1)
+y_true = np.argmax(testY,axis=1)
+print(confusion_matrix(y_true,y_p))
+
+# print classification report
+from sklearn.metrics import classification_report
+print(classification_report(y_true,y_p))
