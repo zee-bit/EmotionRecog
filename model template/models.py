@@ -38,3 +38,9 @@ model = Model(inputs = mobile.input , outputs = op_layer)
 model.compile(optimizer = 'adam', 
               loss = 'binary_crossentropy', 
               metrics = ['acc'])
+
+# defining a new model as feature extractor for svm and xgboost
+model_new = Model(inputs = mobile.input , outputs = op_layer)
+
+#compiling model
+model_new.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['acc'])
