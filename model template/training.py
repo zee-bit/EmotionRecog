@@ -88,3 +88,13 @@ svm_train = svm.score(train_new,np.argmax(trainY,axis=1))
 print('training accuracy of svm: ',svm_train)
 svm_score = svm.score(test_new,np.argmax(testY,axis=1))
 print('testing accuracy of svm: ',svm_score)
+
+
+# increasing accuracy using cnn as feature extractor and xgboost as boosting technics
+from xgboost import XGBClassifier
+xg = XGBClassifier()
+xg.fit(train_new,np.argmax(trainY,axis=1))
+xg_train = xg.score(train_new,np.argmax(trainY,axis=1))
+print('training accuracy of xgboost: ',xg_train)
+xg_score = svm.score(test_new,np.argmax(testY,axis=1))
+print('testing accuracy of xgboost: ',xg_score)
