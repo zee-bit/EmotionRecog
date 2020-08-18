@@ -73,3 +73,18 @@ print(confusion_matrix(y_true,y_p))
 # print classification report
 from sklearn.metrics import classification_report
 print(classification_report(y_true,y_p))
+
+
+# increasing accuracy using cnn as feature extractor and svm as classifier
+# creating train and test features for svm and xgboost
+train_new = model_new.predict(trainX)
+test_new = model_new.predict(testX)
+
+# load and training svm
+from sklearn.svm import SVC
+svm = SVC(kernel='rbf')
+svm.fit(train_new,np.argmax(trainY,axis=1))
+svm_train = svm.score(train_new,np.argmax(trainY,axis=1))
+print('training accuracy of svm: ',svm_train)
+svm_score = svm.score(test_new,np.argmax(testY,axis=1))
+print('testing accuracy of svm: ',svm_score)
