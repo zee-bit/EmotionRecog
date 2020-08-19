@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:camera/camera.dart';
 import 'package:glob/glob.dart';
+import 'package:dio/dio.dart';
+import 'package:http/http.dart' as http;
 
 int cameraMode=0;
 
@@ -16,6 +20,13 @@ class CameraScreen extends StatefulWidget {
 
 class _CameraScreenState extends State<CameraScreen> {
   CameraController controller;
+  Dio dio= new Dio();
+  Future<int> uploadImage(filename,url) async{
+    var request= http.MultipartRequest('POST',Uri.parse(url));
+    request.files.add(await http.MultipartFile.fromPath('video',filename));
+    var res= await request.send();
+    return res.statusCode;
+  }
   @override
   void initState() {
     // TODO: implement initState
@@ -80,7 +91,7 @@ class _CameraScreenState extends State<CameraScreen> {
                   minWidth: 10,
                   padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                   onPressed:() {
-                    controller.startVideoRecording('VideoTestRec.mp4');
+                    controller.startVideoRecording('/storage/emulated/0/DCIM/Camera/VideoTestRec.mp4');
                     print("started recording");
                   },
                   child: Text(
@@ -155,12 +166,21 @@ class _CameraScreenState extends State<CameraScreen> {
             child: MaterialButton(
               minWidth: 10,
               padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-              onPressed:() {
-                controller.startVideoRecording('/storage/emulated/0/DCIM/Camera/VideoTestRec.mp4');
-                print("started recording");
+              onPressed:() async {
+                FormData formData = new FormData.fromMap({
+                  //'name':'videoUpload',
+                'video': await MultipartFile.fromFile(
+                '/storage/emulated/0/DCIM/Camera/VideoTestRec.mp4',
+                //filename:"VideoTestRec.mp4"
+                ),
+                });
+               var res= await dio.post('server_url',data: formData);
+               print(res);
+
+
               },
               child: Text(
-                'See Results',
+                'Upload to Server',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
